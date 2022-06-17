@@ -1,0 +1,47 @@
+
+<html>
+<body>
+    <h3>Прогнозирование соотношения матрица-наполнитель</h3>
+<div>
+  <form action="/predict" method="POST">
+    <label for="plot">Введите Плотность</label>
+    <input type="number" step="0.01" id="plot" name="plot">
+    <br>
+    <label for="mup">Введите Модуль упругости, ГПа</label>
+    <input type="number" step="0.01" id="mup" name="mup">
+    <br>
+    <label for="ko">Введите Количество отвердителя, м.%</label>
+    <input type="number" step="0.01" id="ko" name="ko">
+    <br>
+    <label for="seg">Введите Содержание эпоксидных групп,%_2</label>
+    <input type="number" step="0.01" id="seg" name="seg">
+    <br>
+    <label for="tv">Введите Температура вспышки, C_2ь</label>
+    <input type="number" step="0.01" id="tv" name="tv">
+    <br>
+    <label for="pp">Введите Поверхностная плотность, г/м2</label>
+    <input type="number" step="0.01" id="pp" name="pp">
+    <br>
+    <label for="mupr">Введите Модуль упругости при растяжении, ГПа</label>
+    <input type="number" step="0.01" id="mupr" name="mupr">
+    <br>
+    <label for="pr">Введите Прочность при растяжении, МПа</label>
+    <input type="number" step="0.01" id="pr" name="pr">
+    <br>
+    <label for="ps">Введите Потребление смолы, г/м2</label>
+    <input type="number" step="0.01" id="ps" name="ps">
+    <br>
+    <label for="un">Введите Угол нашивки, град</label>
+    <input type="number" step="0.01" id="un" name="un">
+    <br>
+    <label for="shn">Введите Шаг нашивки</label>
+    <input type="number" step="0.01" id="shn" name="shn">
+    <br>
+    <label for="pn">Введите Плотность нашивки</label>
+    <input type="number" step="0.01" id="pn" name="pn">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
