@@ -1,21 +1,17 @@
-В процессе написания ВКР:
+# New Composite Materials' Qualities 
 
-Изучены теоретические основы и методы решения поставленной задачи.
+The project is for the Data Science course at Bauman Moscow State Technical University.
 
-Проведен разведочный анализ предложенных данных. Нарисованы гистограммы распределения каждой из переменной, диаграммы ящика с усами, попарные графики рассеяния точек. Для каждой колонки получены среднее, медианное значение, проведен анализ и исключение выбросов, проверено наличие пропусков.
+The data consists of two datasets with numerical features, such as etc.
 
-Проведена предобработка данных (удаление шумов, нормализация и т.д.).
+After performing EDA on raw data, I experimented with diferent preprocessing methods, e.g removed outliers, log-transformed and normalized data. 
 
-Обучены нескольких моделей для прогноза модуля упругости при растяжении и прочности при растяжении. При построении моделей был проведен поиск гиперпараметров моделей с помощью поиска по сетке с перекрестной проверкой.
+The following models were build: Linear Regression, Random Forest Regressor, Gradient Boosting Regressor to predict The Modulus of Elasticity at Tension. For Matrix-Filler Ratio prediction I build a dense/fully connected neural network with tensorflow.keras. Both scikit-learn models and keras model were used in hyperparameter tuning with Grid Search and Random Search to find best parameters. 
 
-Написана нейронная сеть, которая будет рекомендовать соотношение матрица-наполнитель.
+The metrics used were: RMSE, MAE, MAPE and MSE (keras model). Models' performance were evaluated on train and test sets.
 
-Разработано приложение с графическим интерфейсом на Flask, которое выдает прогнозы модуля упругости при растяжении и прочности при растяжении, соотношение матрица-наполнитель с помощью обученных нейронных сетей.
+The best-performing keras model's weights were saved and used in Flask application. The app asks to enter 11 (can be 12) parameters of composite material, and predicts the Matrix-Filler Ratio.
 
-Оценены точности моделей на тренировочном и тестовом датасете.
+No linear relationships between features were identified. Models did not manage to capture & describe relationships in data. Further experiments are required, e.g. feature engineering new features, creating synthetic data, trying unsupervised learning etc. 
 
-Создан данный репозиторий в GitHub, в котором выложены все материалы по ВКР.
-Web-приложение на Flask. Инструкция.
-
-В разработанном веб-приложении можно спрогнозировать с помощью обученных нейронных сетей конечные свойства композиционных материалов, такие как [Матрица-наполнитель, Прочность при растяжении, Модуль упругости при растяжении], на основе введенных пользователем значений.
 
